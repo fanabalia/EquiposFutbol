@@ -24,6 +24,7 @@
 -(void)cargarDatosDemo
 {
     NSLog(@"Cargar datos demo");
+    NSLog(@"Cargar datos demo 2");    
     NSMutableArray *datosEstadiosArray=[[NSMutableArray alloc] initWithCapacity:2];
     [datosEstadiosArray addObject:[EstadioFutbol objetoEstadioFutbol:@"Santiago Bernabeu" ciudad:@"Madrid" latitud:[[NSNumber alloc] initWithDouble:40.453042] longitud:[[NSNumber alloc] initWithDouble:-3.688294]]];
     [datosEstadiosArray addObject:[EstadioFutbol objetoEstadioFutbol:@"Nou Camp" ciudad:@"Barcelona" latitud:[[NSNumber alloc] initWithDouble:41.380887] longitud:[[NSNumber alloc] initWithDouble:2.122826]]];   
