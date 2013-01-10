@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="10K549" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="pNt-vY-CP5">
+    <dependencies>
+        <development defaultVersion="4200" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="OMX-Al-W1I">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T36-f4-aEH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="mTt-q2-FJr" customClass="EstadioFutbolTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kVX-a4-kaR">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="lS5-59-LBI">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="mTt-q2-FJr" id="Tbf-mO-JNF"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Celda" id="Ond-em-454">
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="mTt-q2-FJr" id="4Xs-au-s5k"/>
+                            <outlet property="delegate" destination="mTt-q2-FJr" id="lNm-MI-hDv"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Estadios de futbol" id="nAg-pz-cBM">
+                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="Qm2-Hj-PgQ">
+                            <connections>
+                                <action selector="abrirBusqueda:" destination="mTt-q2-FJr" id="4Ub-FM-rqJ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="hZk-vE-QHB">
+                            <connections>
+                                <action selector="refrescar:" destination="mTt-q2-FJr" id="Agp-mG-3Ge"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="estadiosFutbolSearchBar" destination="lS5-59-LBI" id="Zgh-dm-Wbq"/>
+                        <outlet property="searchDisplayController" destination="Jwe-di-nMH" id="l46-iZ-9YB"/>
+                    </connections>
+                </tableViewController>
+                <searchDisplayController id="Jwe-di-nMH">
+                    <connections>
+                        <outlet property="delegate" destination="mTt-q2-FJr" id="hsy-gd-TpH"/>
+                        <outlet property="searchBar" destination="lS5-59-LBI" id="crd-dD-odx"/>
+                        <outlet property="searchContentsController" destination="mTt-q2-FJr" id="yaj-bt-h9W"/>
+                        <outlet property="searchResultsDataSource" destination="mTt-q2-FJr" id="bhq-lA-Fbh"/>
+                        <outlet property="searchResultsDelegate" destination="mTt-q2-FJr" id="8GH-sY-10b"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="880" y="-451"/>
+        </scene>
+        <scene sceneID="qXy-8A-WCm">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rwF-49-o5U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tabBarController definesPresentationContext="YES" id="pNt-vY-CP5" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="jTz-Vc-gbU">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="KD1-UT-cZb" kind="relationship" relationship="viewControllers" id="rh1-Fd-sDd"/>
+                        <segue destination="rgb-GB-sW3" kind="relationship" relationship="viewControllers" id="9e0-lh-AoH"/>
+                    </connections>
+                </tabBarController>
+            </objects>
+            <point key="canvasLocation" x="-160" y="17"/>
+        </scene>
+        <scene sceneID="mAA-BK-b2V">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="awc-BU-DcW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="rgb-GB-sW3" customClass="MapaViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3rY-53-9Y8">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="1GY-rU-wnb">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="411"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="rgb-GB-sW3" id="Hit-Nr-rfu"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Mapa" id="mfm-9N-5Vh"/>
+                    <connections>
+                        <outlet property="mapa" destination="1GY-rU-wnb" id="jjm-db-QXy"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="317" y="309"/>
+        </scene>
+        <scene sceneID="5ah-bK-97P">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KOv-Fk-3bC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="KD1-UT-cZb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Estadios" id="IbY-0v-4oU"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="6F3-Nh-5cv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mTt-q2-FJr" kind="relationship" relationship="rootViewController" id="uQb-bm-3aY"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="384" y="-451"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="EstadioFutbolTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EstadioFutbolTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="abrirBusqueda:"/>
+                <relationship kind="action" name="refrescar:"/>
+                <relationship kind="outlet" name="estadiosFutbolSearchBar" candidateClass="UISearchBar"/>
+            </relationships>
+        </class>
+        <class className="MapaViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapaViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mapa" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
